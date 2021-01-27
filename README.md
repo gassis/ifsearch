@@ -18,6 +18,6 @@ Passo-a-Passo:
 4. Baixe os arquivos nesta pasta, de acordo com as instruções acima
 5. A partir da pasta criada e, depois de ter baixado os arquivos do sistema, digite:
 
-   docker-compose up
+   ### docker-compose up
 
 
