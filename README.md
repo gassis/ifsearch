@@ -32,5 +32,10 @@ Passo-a-Passo:
 6. A partir da pasta criada e, depois de ter baixado os arquivos do sistema, digite:
 
    #### docker-compose up
+   
+   
+7. Após a instalação, o serviço estará acessível por meio da seguinte URL:
+
+   http://localhost:5000
 
 
