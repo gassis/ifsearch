@@ -1,0 +1,10 @@
+python-crontab
+requests
+lxml
+progressbar2
+PyPDF4 
+pytesseract 
+pdf2image 
+elasticsearch_dsl
+#flask
+#gunicorn
