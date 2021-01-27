@@ -9,11 +9,17 @@ Passo-a-Passo:
 1. Abra um Prompt de Comando ou Terminal
 2. Crie uma pasta/diretório específico para o sistema. 
 
-   #### $ mkdir <nome_da_pasta> ou C:\> mkdir <nome_da_pasta>
+   #### $ mkdir <nome_da_pasta> ou 
+   
+   #### C:\> mkdir <nome_da_pasta>
+
 
 3. Entre na pasta
 
-   #### $ cd <nome_da_pasta> ou C:\> cd <nome_da_pasta> 
+   #### $ cd <nome_da_pasta> ou 
+   
+   #### C:\> cd <nome_da_pasta> 
+
 
 4. Baixe os arquivos nesta pasta, de acordo com as instruções acima
 5. A partir da pasta criada e, depois de ter baixado os arquivos do sistema, digite:
