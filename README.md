@@ -7,7 +7,7 @@ Para instruções de como baixar os arquivos necessários à instalação do sis
 
 https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 
-> Uso:
+### Uso:
 
 1. Instale o docker-compose. Instruções obtidas em:
 
