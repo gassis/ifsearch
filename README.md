@@ -10,7 +10,7 @@ https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/cl
 
 ### Uso:
 
-1. Instale o docker-compose. Instruções obtidas em:
+1. Instale o docker-compose. As instruções podem ser obtidas em:
 
    https://docs.docker.com/compose/install/
 
