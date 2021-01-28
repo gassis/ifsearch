@@ -1,6 +1,7 @@
 
 
-# IFSearch 
+# IFSearch ![](https://www.ifg.edu.br/images/ifg/campus/jatai/logo/logo-ifg-vertical-jatai.png)
+
 O IFSearch é uma ferramenta que propicia a busca em documentos oficiais do IFG que são publicados oficialmente no Boletim de Notícias. Em virtude da dificuldade na busca por palavras em cada um dos documentos disponíveis, este sistema oferece uma interface a partir da qual os usuários poderão simplesmente digitar um termo de interesse como nomes próprios (pessoas, empresas,...), datas e quaisquer outras palavras.
 
 Para instruções de como baixar os arquivos necessários à instalação do sistema a partir do Git, siga os passos descritos no link abaixo:
