@@ -14,24 +14,14 @@ Passo-a-Passo:
 
 
 2. Abra um Prompt de Comando ou Terminal
+
 3. Crie uma pasta/diretório específico para o sistema. 
 
-   #### $ mkdir <nome_da_pasta> ou 
-   
-   #### C:\> mkdir <nome_da_pasta>
+4. Baixe os arquivos nesta pasta, de acordo com as instruções acima
 
+5. A partir da pasta criada e, depois de ter baixado os arquivos do sistema, digite:
 
-4. Entre na pasta
-
-   #### $ cd <nome_da_pasta> ou 
-   
-   #### C:\> cd <nome_da_pasta> 
-
-
-5. Baixe os arquivos nesta pasta, de acordo com as instruções acima
-6. A partir da pasta criada e, depois de ter baixado os arquivos do sistema, digite:
-
-   #### docker-compose up
+   `$docker-compose up`
    
    
 7. Após a instalação, o serviço estará acessível por meio da seguinte URL:
