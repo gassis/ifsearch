@@ -8,25 +8,29 @@ Para instruções de como baixar os arquivos necessários à instalação do sis
 
 https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 
-### Uso:
+## Uso:
 
-1. Instale o docker-compose. As instruções podem ser obtidas em:
+Instale o docker-compose. As instruções podem ser obtidas em:
 
    https://docs.docker.com/compose/install/
 
 
-2. Abra um Prompt de Comando ou Terminal
+### Docker Compose
 
-3. Crie uma pasta/diretório específico para o sistema. 
+Realize o clone do repositório:
 
-4. Baixe os arquivos nesta pasta, de acordo com as instruções acima
+   `$git clone https://github.com/gassis/ifsearch.git`
+   `$cd ifsearch`
 
-5. A partir da pasta criada e, depois de ter baixado os arquivos do sistema, digite:
+
+A partir da pasta criada acima, execute:
+
 
    `$docker-compose up`
    
    
-7. Após a instalação, o serviço estará acessível por meio da seguinte URL:
+Após a instalação, acesse a ferramenta por meio da seguinte URL:
+
 
    http://localhost:5000
 
