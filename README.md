@@ -2,7 +2,8 @@
 
 # IFSearch
 
-![alt text](/ifsearch.png)
+<img align="center" width="100" height="100" src="/ifsearch.png">
+
 
 O IFSearch é uma ferramenta que propicia a busca em documentos oficiais do IFG que são publicados oficialmente no Boletim de Notícias. Em virtude da dificuldade na busca por palavras em cada um dos documentos disponíveis, este sistema oferece uma interface a partir da qual os usuários poderão simplesmente digitar um termo de interesse como nomes próprios (pessoas, empresas,...), datas e quaisquer outras palavras.
 
