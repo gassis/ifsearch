@@ -18,25 +18,34 @@ Instale o docker-compose. As instruções podem ser obtidas em:
 
 ### Usando o pip
 
+
 Faça o download do Docker Compose usando o pip3:
+
 
 `$ pip install docker-compose`
 
 Obs.: O Docker Compose exige que a versão do Python seja a 3.6 or superior.
 
+
 Para verificar se a instalação foi bem-sucedida, execute:
+
 
 `$ docker-compose --version`
 
+
 Você deverá visualizar um resultado parecido com este:
+
 
 Saída:
 > docker-compose version 1.26.0, build 8a1c60f6
 
 
+
 ### Docker Compose
 
+
 Realize o clone do repositório:
+
 
    `$ git clone https://github.com/gassis/ifsearch.git`
    
@@ -44,6 +53,7 @@ Realize o clone do repositório:
 
 
 A partir da pasta criada acima, execute:
+
 
    `$ docker-compose up`
    
