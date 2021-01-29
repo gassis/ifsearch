@@ -20,6 +20,7 @@ Instale o docker-compose. As instruções podem ser obtidas em:
 Realize o clone do repositório:
 
    `$git clone https://github.com/gassis/ifsearch.git`
+   
    `$cd ifsearch`
 
 
