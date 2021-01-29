@@ -1,4 +1,4 @@
-
+![alt text](/build.svg)
 
 # IFSearch
 
