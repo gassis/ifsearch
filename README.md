@@ -4,22 +4,26 @@
 
 O IFSearch é uma ferramenta que propicia a busca em documentos oficiais do IFG que são publicados oficialmente no Boletim de Notícias. Em virtude da dificuldade na busca por palavras em cada um dos documentos disponíveis, este sistema oferece uma interface a partir da qual os usuários poderão simplesmente digitar um termo de interesse como nomes próprios (pessoas, empresas,...), datas e quaisquer outras palavras.
 
+
 Para instruções de como baixar os arquivos necessários à instalação do sistema a partir do Git, siga os passos descritos no link abaixo:
 
 https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 
-## Linux
 
-Instale o docker-compose. As instruções podem ser obtidas em:
+## Windows
+
+Faça o download e instalação do Docker Compose seguindo as instruções abaixo:
 
    https://docs.docker.com/compose/install/
    
-
+   
+   
+## Linux
 
 ### Usando o pip
 
 
-Faça o download do Docker Compose usando o pip3:
+Faça o download e instalação do Docker Compose usando o pip3:
 
 
 `$ pip install docker-compose`
