@@ -63,7 +63,7 @@ Realize o clone do repositório:
 A partir da pasta criada acima, execute:
 
 
-   `$ ifsearch/docker-compose up`
+   `$ docker-compose up`
    
    
 Após a instalação, acesse a ferramenta por meio da seguinte URL:
