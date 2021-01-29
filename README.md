@@ -19,15 +19,15 @@ Instale o docker-compose. As instruções podem ser obtidas em:
 
 Realize o clone do repositório:
 
-   `$git clone https://github.com/gassis/ifsearch.git`
+   `$ git clone https://github.com/gassis/ifsearch.git`
    
-   `$cd ifsearch`
+   `$ cd ifsearch`
 
 
 A partir da pasta criada acima, execute:
 
 
-   `$docker-compose up`
+   `$ docker-compose up`
    
    
 Após a instalação, acesse a ferramenta por meio da seguinte URL:
