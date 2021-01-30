@@ -70,4 +70,4 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL:
 
    http://localhost:5000
 
-
+Obs.: Além da porta **5000**, o sistema também irá demandar o uso das portas **9200** e **9300**.
