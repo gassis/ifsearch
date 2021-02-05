@@ -65,7 +65,7 @@ A partir da pasta criada acima, execute:
 
    `$ docker-compose up`
    
-   > Obs.: Como o índice de busca é construído na primeira execução do aplicativo, é necessário que a aplicação fique em **execução ininterrupta de pelo menos 20 horas**.
+   > Obs.: Como o índice de busca é construído na **primeira execução do aplicativo**, é necessário que a aplicação fique em **execução ininterrupta por um prazo de aproximadamente 24 horas, dependendo do equipamento.**
 
    
    
