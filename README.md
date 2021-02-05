@@ -30,7 +30,7 @@ Faça o download e instalação do Docker Compose seguindo as instruções abaix
 Faça o download e instalação do Docker Compose usando o pip3:
 
 
-`$ pip3 install docker-compose`
+`$ sudo apt install docker-compose`
 
 Obs.: O Docker Compose exige que a versão do Python seja a 3.6 or superior.
 
