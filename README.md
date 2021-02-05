@@ -32,7 +32,7 @@ Faça o download e instalação do Docker Compose usando o gerenciador de instal
 
 `$ sudo apt install docker-compose`
 
-Obs.: O Docker Compose exige que a versão do Python seja a 3.6 or superior.
+> Obs.: O Docker Compose exige que a versão do Python seja a 3.6 or superior.
 
 
 Para verificar se a instalação foi bem-sucedida, execute:
@@ -65,7 +65,7 @@ A partir da pasta criada acima, execute:
 
    `$ docker-compose up`
    
-   Obs.: Como o índice de busca é construído na primeira execução do aplicativo, é necessário que a aplicação fique em **execução ininterrupta de pelo menos 20 horas**.
+   > Obs.: Como o índice de busca é construído na primeira execução do aplicativo, é necessário que a aplicação fique em **execução ininterrupta de pelo menos 20 horas**.
 
    
    
@@ -73,4 +73,4 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL:
 
    http://localhost:5000
    
-   Obs.: Além da porta **5000**, o sistema também irá demandar o uso das portas **9200** e **9300**.
+   > Obs.: Além da porta **5000**, o sistema também irá demandar o uso das portas **9200** e **9300**.
