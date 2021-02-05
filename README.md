@@ -64,6 +64,7 @@ A partir da pasta criada acima, execute:
 
 
    `$ docker-compose up`
+   
    Obs.: Como o índice de busca é construído na primeira execução do aplicativo, é necessário que a aplicação fique em **execução ininterrupta de pelo menos 20 horas**.
 
    
@@ -71,4 +72,5 @@ A partir da pasta criada acima, execute:
 Após a instalação, acesse a ferramenta por meio da seguinte URL:
 
    http://localhost:5000
+   
    Obs.: Além da porta **5000**, o sistema também irá demandar o uso das portas **9200** e **9300**.
