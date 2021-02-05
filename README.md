@@ -24,10 +24,10 @@ Faça o download e instalação do Docker Compose seguindo as instruções abaix
    
 ## Linux
 
-### Usando o pip
+### Usando o APT
 
 
-Faça o download e instalação do Docker Compose usando o gerenciador de instalação de pacotes como apt:
+Faça o download e instalação do Docker Compose usando o gerenciador de instalação de pacotes, como o apt:
 
 
 `$ sudo apt install docker-compose`
