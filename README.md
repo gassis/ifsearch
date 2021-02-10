@@ -69,7 +69,7 @@ A partir da pasta criada acima, execute:
 
    
    
-Após a instalação, acesse a ferramenta por meio da seguinte URL:
+Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próprio browser:
 
    http://localhost:5000
    
