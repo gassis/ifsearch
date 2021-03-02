@@ -25,7 +25,7 @@ class Page(Document):
 
 
 def monitor_index():
-    client = Elasticsearch('elasticsearch:9200')
+    client = Elasticsearch('http://localhost:9200')
     s = Search(using=client, index="docsearch")
     s = s.query("match_all")
     results = {}
@@ -185,7 +185,7 @@ def monitor():
     try:
         tempdir = '/home/gustavo/PycharmProjects/docsearch/temp/'
         ifgpage = "https://www.ifg.edu.br"
-        connections.create_connection(hosts=['elasticsearch:9200'], timeout=20)
+        connections.create_connection(hosts=['http://localhost:9200'], timeout=20)
         es_data = monitor_index()
         docs = bulletin(ifgpage)
         insert = []
