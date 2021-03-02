@@ -1,7 +1,7 @@
 from crontab import CronTab
 
 cron = CronTab(user='username')
-index = cron.new(command='python monitor.py')
+index = cron.new(command='python monitor_local.py')
 
 index.hour.on(9)
 index.week.on('FRI', 'MON')
