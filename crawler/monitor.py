@@ -46,11 +46,12 @@ def monitor_index():
 
 def getindex_month(month):
     meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
-    idx_a = idx_b = 0
+    idx_m = 0
     for idx, val in enumerate(meses, 1):
         if val == month.lower():
-            idx_month = idx
-    return idx_month
+            idx_m = idx
+            break
+    return idx_m
 
 
 
