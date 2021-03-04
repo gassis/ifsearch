@@ -46,11 +46,12 @@ def monitor_index():
 
 def getindex_month(month):
     meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
-    idx_a = idx_b = 0
+    idx_m = 0
     for idx, val in enumerate(meses, 1):
         if val == month.lower():
-            idx_month = idx
-    return idx_month
+            idx_m = idx
+            break
+    return idx_m
 
 
 
@@ -190,7 +191,6 @@ def monitor():
         docs = bulletin(ifgpage)
         insert = []
         for year, month, portarias in docs:
-            print('->', year,month)
             p_select = set()
             for item in portarias:
                 url = list(urllib.parse.urlsplit(ifgpage + item))
@@ -200,18 +200,15 @@ def monitor():
                 p_select.add(page)
             if es_data:
                 if int(es_data[0][0]) == int(year):
-                    es_months = []
-                    for key in es_data[0][1].keys():
-                        es_months.append(key)
-                    gkey = max(es_months, key=lambda x : getindex_month(x))
-                    print(es_months,'\n')
-                    if gkey == month:
-                        value = es_data[0][1][month]
-                        if p_select - set(value):
-                            insert.append((year, month, p_select - set(value)))
-                    elif getindex_month(gkey) < getindex_month(month):
-                        insert.append((year, month, p_select))
-                elif int(es_data[0][0]) < int(year):
+                    for key, value in es_data[0][1].items():
+                        if key == month:
+                            if p_select - set(value):
+                                insert.append((year, month, p_select - set(value)))
+                            break
+                        elif getindex_month(key) < getindex_month(month):
+                            insert.append((year, month, p_select))
+                            break
+                elif int(es_data[0][0]) != int(year):
                     insert.append((year, month, p_select))
             else:
                 insert.append((year, month, p_select))
