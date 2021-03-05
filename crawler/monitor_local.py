@@ -188,6 +188,7 @@ def monitor():
         ifgpage = "https://www.ifg.edu.br"
         connections.create_connection(hosts=['http://localhost:9200'], timeout=20)
         es_data = monitor_index()
+        print(es_data[-1][0], es_data[0][0])
         docs = bulletin(ifgpage)
         insert = []
         for year, month, portarias in docs:
@@ -208,12 +209,12 @@ def monitor():
                         elif getindex_month(key) < getindex_month(month):
                             insert.append((year, month, p_select))
                             break
-                elif int(es_data[0][0]) != int(year):
+                elif int(es_data[0][0]) < int(year) or int(es_data[-1][0]) > int(year):
                     insert.append((year, month, p_select))
             else:
                 insert.append((year, month, p_select))
-        if insert:
-            doccrawler(insert)
+        #if insert:
+        #    doccrawler(insert)
     except requests.exceptions.ConnectionError as e:
         print("## monitor ERROR 1: ##", e)
         time.sleep(5)
