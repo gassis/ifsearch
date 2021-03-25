@@ -60,7 +60,8 @@ Realize o clone do repositório:
 
 A partir da pasta criada acima, execute:
 
-   `$ cd crawler`
+   `~ifsearch$ cd crawler`
+   
    `~/ifsearch/crawler$ docker-compose up`
    
    > Obs.: Como o índice de busca é construído na **primeira execução do aplicativo**, é necessário que a aplicação fique em **execução ininterrupta por um prazo de aproximadamente 24 horas, dependendo do equipamento.**
@@ -93,7 +94,7 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
   ` monitor.py -y <year> -m <month>`
   
   - Exemplo de uso do comando monitor.py para (re)indexação dos anos de 2014, 2015 e 2016. Neste caso, quando se define mais de um ano, serão processados todos os meses.
-  - 
+ 
     `monitor.py -y 2014,2015,2016`
 
 
