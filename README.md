@@ -88,10 +88,12 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
     
   `~/ifsearch/crawler$ docker exec -it crawler_monitor python monitor.py -y 2020 -m março,abril`
 
-- A sintaxe correta do comando monitor.py:
-  ```
-  monitor.py -y <year> -m <month>
-  ```
+- Segue abaixo a sintaxe para o comando monitor.py. É importante ressaltar que para se definir mais de um ano ou mês, basta inserir listas com os itens separados por vírgula (sem espaços):
+  
+  ` monitor.py -y <year> -m <month>`
+  
+  - Exemplo de uso do comando monitor.py para (re)indexação dos anos de 2014, 2015 e 2016. Neste caso, quando se define mais de um ano, serão processados todos os meses.
+    `monitor.py -y 2014,2015,2016`
 
 
 Para fins de referência, ressaltamos que para este projeto foram utilizadas as seguintes tecnologias e ferramentas:
