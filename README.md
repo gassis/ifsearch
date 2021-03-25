@@ -93,7 +93,10 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
   ` monitor.py -y <year> -m <month>`
   
   - Exemplo de uso do comando monitor.py para (re)indexação dos anos de 2014, 2015 e 2016. Neste caso, quando se define mais de um ano, serão processados todos os meses.
+  - 
     `monitor.py -y 2014,2015,2016`
+
+
 
 
 Para fins de referência, ressaltamos que para este projeto foram utilizadas as seguintes tecnologias e ferramentas:
