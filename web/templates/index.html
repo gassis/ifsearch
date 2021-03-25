@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>IFSearch - Boletim de Serviços</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  <style>
+    .form-control-borderless {
+      border: none;
+    }
+
+    .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+    .img-fluid {
+      max-width: 10%;
+      height: 10%;
+    }
+  </style>
+  </head>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <div class="d-flex justify-content-center">
+      <img src="/static/images/ifsearch.png" class="img-fluid" alt="Responsive image">
+  </div>
+  <div class="container">
+    <br/>
+	<div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm" action="/search" method="post" role="form">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-search h4 text-body"></i>
+                        </div>
+                        <!--end of col-->
+                        <div class="col">
+                            <input id="search_term" name="search_term" class="form-control form-control-lg" type="search" placeholder="O que você está procurando hoje ?">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit">Busca</button>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <div class="card-body row no-gutters align-items-center">
+                    <div class="radio">
+                      <input class="radio" type="radio" name="radio" id="radio1" value="radio1" checked>
+                      <label class="form-check-label" for="radio1">Busca Exata (padrão)</label>
+                      <tab1>
+                        <input class="radio" type="radio" name="radio" id="radio2" value="radio2">
+                        <label class="radio" for="radio2">Busca Geral</label>
+                      </tab1>
+                    </div>
+                    </div>
+                </form>
+            </div>
+            <!--end of col-->
+        </div>
+  </div>
+</html>
+

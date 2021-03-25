@@ -1,0 +1,76 @@
+version: '3.7'
+services: 
+
+  elasticsearch:
+    build: ./es
+    image: ifelastic
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - esnet
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://0.0.0.0:9200"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  
+  web:
+    build: ./web
+    image: ifweb
+    container_name: web
+    restart: always
+    ports:
+      - "5000:5000"
+    networks:
+      - esnet
+    depends_on:
+      - elasticsearch
+  
+  crawler:
+    build: ./crawler
+    image: ifcrawler
+    container_name: crawler
+    volumes:
+      - ./crawler:/ifsearch/code
+    depends_on:
+      - web
+    networks:
+      - esnet      
+    command: sh -c "./wait-for-it.sh  elasticsearch:9200 && python -u create_index.py && python -u monitor.py"
+  
+  monitor:
+    build: ./crawler
+    image: ifmonitor
+    container_name: crawler_monitor   
+    volumes:
+      - ./crawler:/ifsearch/code
+    networks:
+      - esnet
+    command: bash  
+    stdin_open: true
+    tty: true        
+
+
+volumes:
+  esdata:
+    driver: local
+    
+networks:
+  esnet:
+

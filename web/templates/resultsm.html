@@ -1,0 +1,161 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<html>
+<html lang="pt">
+  <head>
+    <title>IFSearch - Resultados da Busca</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+    <style>
+        tab1 { padding-left: 4em; }
+        tab2 { padding-left: 8em; }
+        tab3 { padding-left: 12em; }
+        tab4 { padding-left: 16em; }    
+    
+        .form-control-borderless {
+          border: none;
+        }
+
+        .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+          border: none;
+          outline: none;
+          box-shadow: none;
+        }
+        .img-fluid {
+          max-width: 10%;
+          height: 10%;
+        }
+    
+	.ibox-content {
+	    background-color: #FFFFFF;
+	    color: inherit;
+	    padding: 15px 20px 20px 20px;
+	    border-color: #E7EAEC;
+	    border-image: none;
+	    border-style: solid solid none;
+	    border-width: 1px 0px;
+	}
+
+	.search-form {
+	    margin-top: 10px;
+	}
+
+	.search-result h3 {
+	    margin-bottom: 0;
+	    color: #1E0FBE;
+	}
+
+	.search-result .search-link {
+	    color: #006621;
+	}
+
+	.search-result p {
+	    font-size: 12px;
+	    margin-top: 5px;
+	}
+
+	.hr-line-dashed {
+	    border-top: 1px dashed #E7EAEC;
+	    color: #ffffff;
+	    background-color: #ffffff;
+	    height: 1px;
+	    margin: 20px 0;
+	}
+
+	h2 {
+	    font-size: 24px;
+	    font-weight: 100;
+	}
+
+	.context-dark, .bg-gray-dark, .bg-primary {
+	    color: rgba(255, 255, 255, 0.8);
+	}
+
+	.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+	    color: #ffffff;
+	}
+
+	ul, ol {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	.social-inner {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    width: 100%;
+	    padding: 23px;
+	    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	    text-transform: uppercase;
+	    color: rgba(255, 255, 255, 0.5);
+	}
+	.social-container .col {
+	    border: 1px solid rgba(255, 255, 255, 0.1);
+	}   
+    </style>
+  </head>
+    
+    <body>
+    <div class="d-flex justify-content-center">
+      <img src="/static/images/ifsearch.png" class="img-fluid" alt="Responsive image">
+    </div>    
+    <div class="container bootstrap snippet">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <h2>
+                            {{ numres }} resultados encontrados para o termo: <span class="text-navy">{{ term }}</span>
+                    </h2>
+        
+                    <div class="search-form">
+                        <form class="card card-sm" action="/search" method="post" role="form">
+                            <div class="card-body row no-gutters align-items-center">
+                            <div class="input-group">
+                                <input id="search_term" name="search_term" type="text" aria-label="Large" placeholder="O que você está buscando hoje?" class="form-control input-lg">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-lg btn-success" type="submit">
+                                        Busca
+                                    </button>
+                                </div>
+                                </div>
+                                <div class="card-body row no-gutters align-items-center">
+                                <div class="radio">
+                                        <input class="radio" type="radio" name="radio" id="radio1" value="radio1" checked>
+                                        <label class="form-check-label" for="radio1">Busca Exata (padrão)</label>
+                                    <tab1>
+                                        <input class="radio" type="radio" name="radio" id="radio2" value="radio2">
+                                        <label class="radio" for="radio2">Busca Geral</label>
+                                    </tab1>
+                                </div>
+                                </div>                                                           
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                    {% for item in results %}
+                    <div class="search-result">
+                        <h5>{{ item[1] }}</h5>
+                        <p>{{ item[2] }}
+                        <p><tab1>
+                        <a href="{{item[0]+'#'+'page='+item[3] | string}}">{{ item[0] }}</a>
+                        </p></tab1>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    {% endfor %}                    
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>    
+  </body>
+    
+</html>
