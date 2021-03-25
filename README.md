@@ -1,4 +1,4 @@
-![alt text](/build.svg)
+![alt text]
 
 # IFSearch
 
@@ -79,6 +79,7 @@ Para fins de referência, ressaltamos que para este projeto foram utilizadas as 
 
 - Python
   - Flask (Web framework)
+  - Jinja (Template Language)
 - Javascript
 - Elasticsearch
 - Shellscript
