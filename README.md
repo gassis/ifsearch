@@ -61,7 +61,7 @@ Realize o clone do repositório:
 A partir da pasta criada acima, execute:
 
    `$ cd crawler`
-   `/ifsearch/crawler$ docker-compose up`
+   `~/ifsearch/crawler$ docker-compose up`
    
    > Obs.: Como o índice de busca é construído na **primeira execução do aplicativo**, é necessário que a aplicação fique em **execução ininterrupta por um prazo de aproximadamente 24 horas, dependendo do equipamento.**
 
@@ -82,11 +82,11 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
 
 - É possível também a execução do script de indexação de forma direta, caso seja necessário a reindexação de algum período do ano. Exemplo de comando para execução da (re)indexação do ano de *2015*:
 
-  `/ifsearch/crawler$ docker exec -it crawler_monitor python monitor.py -y 2015`
+  `~/ifsearch/crawler$ docker exec -it crawler_monitor python monitor.py -y 2015`
   
 - Caso o usuário deseje especificar um ou mais meses específicos de um certo ano, como por exemplo, os meses de *março e abril de 2020*:
     
-  `/ifsearch/crawler$ docker exec -it crawler_monitor python monitor.py -y 2020 -m março,abril`
+  `~/ifsearch/crawler$ docker exec -it crawler_monitor python monitor.py -y 2020 -m março,abril`
 
 
 Para fins de referência, ressaltamos que para este projeto foram utilizadas as seguintes tecnologias e ferramentas:
