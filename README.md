@@ -88,6 +88,11 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
     
   `~/ifsearch/crawler$ docker exec -it crawler_monitor python monitor.py -y 2020 -m março,abril`
 
+- A sintaxe correta do comando monitor.py:
+  ```
+  monitor.py -y <year> -m <month>
+  ```
+
 
 Para fins de referência, ressaltamos que para este projeto foram utilizadas as seguintes tecnologias e ferramentas:
 
