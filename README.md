@@ -73,6 +73,11 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
    
    > Obs.: Além da porta **5000**, o sistema também irá demandar o uso das portas **9200** e **9300 (Elasticsearch)**.
 
+Para realizar o agendamento de execução do processo de indexação, recomendamos a utilização do utilitário **CRON**.
+Exemplo de entrada no **crontab**:
+
+`#* * * * * docker exec -it crawler_monitor python monitor.py`
+
 Para fins de referência, ressaltamos que para este projeto foram utilizadas as seguintes tecnologias e ferramentas:
 
 - Python
