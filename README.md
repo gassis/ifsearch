@@ -1,5 +1,3 @@
-![alt text]
-
 # IFSearch
 
 <p align="center">
