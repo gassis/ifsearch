@@ -79,7 +79,7 @@ Após a instalação, acesse a ferramenta por meio da seguinte URL, em seu próp
 
 - Para realizar o agendamento de execução do processo de indexação, recomendamos a utilização do utilitário **CRON**. Exemplo de entrada no **crontab**:
 
-  `#* * * * * docker exec -it crawler_monitor python crawler/monitor.py`
+  `#* * * * * docker exec -it crawler_monitor python monitor.py`
 
 - É possível também a execução do script de indexação de forma direta, caso seja necessário a reindexação de algum período do ano. Exemplo de comando para execução da (re)indexação do ano de *2015*:
 
