@@ -228,9 +228,11 @@ def monitor():
                 page = urllib.parse.urlunsplit(url)
                 p_select.add(page)
             if arg != None:
-                m = [x.lower() for x in arg[1]]
                 if str(year) in arg[0]:
-                    if month.lower() in m:
+                    if arg[1] != None:
+                        if month.lower() in [x.lower() for x in arg[1]]:
+                            insert.append((year, month, p_select))
+                    else:
                         insert.append((year, month, p_select))
             elif es_data:
                 if int(es_data[0][0]) == int(year):
