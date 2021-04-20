@@ -1,4 +1,5 @@
 import re, requests, urllib, PyPDF4, pytesseract, base64, tempfile, time, socket, progressbar, sys, getopt, os
+from collections import OrderedDict
 from urllib.error import URLError
 from lxml import html
 from io import BytesIO
@@ -38,10 +39,9 @@ def monitor_index():
             results[hit.year][hit.month] = []
         if hit.url not in results[hit.year][hit.month]:
             results[hit.year][hit.month].append(hit.url)
-    items = results.items()
-    sorted_items = sorted(items, reverse=True)
+    sorted_results = OrderedDict(sorted(results.items(), reverse=True))
     client.close()
-    return sorted_items
+    return dict(sorted_results)
 
 
 def getindex_month(month):
@@ -65,7 +65,7 @@ def bulletin(ifgpage):
         bulletindata = requests.get(ifgpage + pageitem)
         btree = html.fromstring(bulletindata.content)
         bpages = btree.xpath('//p/strong/text() | //p/b/text()')
-        year = re.search(r'\d{4}$', bpages[0]).group()
+        year = str(int(bpages[0].split(' ')[3]))
         #print("Ano = " + year)
         listmonth = []
         portarias = []
@@ -235,8 +235,8 @@ def monitor():
                     else:
                         insert.append((year, month, p_select))
             elif es_data:
-                if int(es_data[0][0]) == int(year):
-                    for key, value in es_data[0][1].items():
+                if year in [int(key) for key in es_data.keys()]:
+                    for key, value in es_data[str(year)].items():
                         if key == month:
                             if p_select - set(value):
                                 insert.append((year, month, p_select - set(value)))
@@ -244,7 +244,7 @@ def monitor():
                         elif getindex_month(key) < getindex_month(month):
                             insert.append((year, month, p_select))
                             break
-                elif int(es_data[0][0]) < int(year) or int(es_data[-1][0]) > int(year):
+                elif max([int(key) for key in es_data.keys()]) < int(year) or min([int(key) for key in es_data.keys()]) > int(year):
                     insert.append((year, month, p_select))
             else:
                 insert.append((year, month, p_select))
